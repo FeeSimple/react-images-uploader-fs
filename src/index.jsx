@@ -5,7 +5,7 @@ import fetch from 'isomorphic-fetch';
 import autobind from 'autobind-decorator';
 import classnames from 'classnames';
 import Dropzone from 'react-dropzone';
-import Button from 'react-progress-button-for-images-uploader';
+import Button from 'react-progress-button';
 import 'babel-core/register';
 import 'babel-polyfill';
 
@@ -143,8 +143,6 @@ export default class ImagesUploader extends Component {
 			});
 		}
 	}
-
-
 
 	@autobind
 	clickImage(key: number, url: string) {
