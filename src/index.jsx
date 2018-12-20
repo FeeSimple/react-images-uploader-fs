@@ -697,7 +697,6 @@ export default class ImagesUploader extends Component {
 						{this.buildClose()}
 						<Dropzone
 							onDrop={this.handleFileDrop}
-							disableClick
 							accept="image/*"
 							className={classNames.dropzone || `${classNamespace}dropzone`}
 							style={dropzoneStyle}
