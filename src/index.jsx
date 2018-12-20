@@ -163,6 +163,7 @@ export default class ImagesUploader extends Component {
 			if (this.props.deleteImage && typeof this.props.deleteImage === 'function') {
 				this.props.deleteImage(key, url);
 			}
+			if(this.props.onImageDeleted)	this.props.onImageDeleted(url)
 		}
 	}
 
