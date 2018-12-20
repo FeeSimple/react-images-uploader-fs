@@ -20,7 +20,7 @@ export default class MyUploader extends Component {
 	render() {
 		return (
 			<ImagesUploader
-				url="http://localhost:9090/multiple"
+				url="http://localhost:9000/multiple"
 				optimisticPreviews
 				onLoadEnd={(err) => {
 					if (err) {
@@ -46,7 +46,7 @@ export default class MyUploader extends Component {
 	render() {
 		return (
 			<ImagesUploader
-				url="http://localhost:9090/notmultiple"
+				url="http://localhost:9000/notmultiple"
 				optimisticPreviews
 				multiple={false}
 				onLoadEnd={(err) => {
@@ -78,17 +78,17 @@ app.use(corsPrefetch);
 
 app.post('/multiple', imagesUpload(
 	'./server/static/multipleFiles',
-	'http://localhost:9090/static/multipleFiles',
+	'http://localhost:9000/static/multipleFiles',
 	true
 ));
 
 app.post('/notmultiple', imagesUpload(
 	'./server/static/files',
-	'http://localhost:9090/static/files'
+	'http://localhost:9000/static/files'
 ));
 
-app.listen(9090, () => {
-	console.log('Listen: 9090');
+app.listen(9000, () => {
+	console.log('Listen: 9000');
 });
 ```
 

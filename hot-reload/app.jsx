@@ -9,17 +9,18 @@ export default class App extends Component {
 		return (
 			<div>
 				<ImagesUploader
-					url="http://localhost:9090/multiple"
+					url="http://localhost:9000/multiple"
 					optimisticPreviews
 					onLoadEnd={(err) => {
 						if (err) {
 							console.error(err);
 						}
 					}}
+					onImageDeleted={() => console.info('on image deleted')}
 					label="Upload multiple images"
 					/>
 				<ImagesUploader
-					url="http://localhost:9090/notmultiple"
+					url="http://localhost:9000/notmultiple"
 					optimisticPreviews
 					multiple={false}
 					onLoadEnd={(err) => {

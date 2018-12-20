@@ -11,15 +11,15 @@ app.use(corsPrefetch);
 
 app.post('/multiple', imagesUpload(
 	'./static/multipleFiles',
-	'http://localhost:9090/static/multipleFiles',
+	'http://localhost:9000/static/multipleFiles',
 	true
 ));
 
 app.post('/notmultiple', imagesUpload(
 	'./static/files',
-	'http://localhost:9090/static/files'
+	'http://localhost:9000/static/files'
 ));
 
-app.listen(9090, () => {
-	console.log('Listen: 9090');
+app.listen(9000, () => {
+	console.log('Listen: 9000');
 });

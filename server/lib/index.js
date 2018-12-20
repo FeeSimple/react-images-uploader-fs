@@ -21,12 +21,12 @@ app.use('/static', _express2.default.static('./static'));
 
 app.use(_corsPrefetchMiddleware2.default);
 
-app.post('/multiple', (0, _imagesUploadMiddleware2.default)('./static/multipleFiles', 'http://localhost:9090/static/multipleFiles', true));
+app.post('/multiple', (0, _imagesUploadMiddleware2.default)('./static/multipleFiles', 'http://localhost:9000/static/multipleFiles', true));
 
-app.post('/notmultiple', (0, _imagesUploadMiddleware2.default)('./static/files', 'http://localhost:9090/static/files'));
+app.post('/notmultiple', (0, _imagesUploadMiddleware2.default)('./static/files', 'http://localhost:9000/static/files'));
 
-app.listen(9090, function () {
-	console.log('Listen: 9090');
+app.listen(9000, function () {
+	console.log('Listen: 9000');
 });
 ;
 

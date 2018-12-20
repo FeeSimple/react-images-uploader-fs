@@ -13,5 +13,5 @@ COPY . /usr/src/app
 RUN mkdir -p static/multipleFiles
 RUN mkdir -p static/files
 
-EXPOSE 9090
+EXPOSE 9000
 CMD [ "npm", "start" ]

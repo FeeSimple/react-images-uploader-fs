@@ -8,7 +8,7 @@ import '../../font.css';
 ReactDOM.render(
 	<div className="examples-container">
 		<ImagesUploader
-			url="http://localhost:9001/multiple"
+			url="http://localhost:9000/multiple"
 			optimisticPreviews
 			onLoadEnd={(err) => {
 				if (err) {
@@ -18,7 +18,7 @@ ReactDOM.render(
 			label="Upload multiple images"
 			/>
 		<ImagesUploader
-			url="http://localhost:9001/notmultiple"
+			url="http://localhost:9000/notmultiple"
 			optimisticPreviews
 			multiple={false}
 			onLoadEnd={(err) => {
